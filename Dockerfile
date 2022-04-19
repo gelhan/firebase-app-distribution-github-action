@@ -1,5 +1,7 @@
 FROM node:alpine
 
+RUN git config --global --add safe.directory /github/workspace
+
 WORKDIR /app
 COPY . /app
 
