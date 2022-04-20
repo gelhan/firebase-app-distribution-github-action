@@ -13,10 +13,12 @@ jobs:
     steps:
       - name: Permission check
         run: git config --global --add safe.directory /github/workspace
-      - name: Permission check #2
+      - name: Permission check 2
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-      - name: Permission check #3
+      - name: Permission check 3
         run: export GIT_CEILING_DIRECTORIES=/github/workspace
+      - name: Permission check 4
+        run: git config --global --add safe.directory /home/runner/work/Study-AndroidApp/Study-AndroidApp
       - name: Checkout
         uses: actions/checkout@main
       - name: Firebase App Distribution Action
